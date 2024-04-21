@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+
+    <style>
+
+
+@media only screen and (max-width: 1440px) {
+             .box{
+            background-color: white;
+            box-shadow: rgba(100, 100, 111, 0.2) -1px 1px 12px 12px; 
+            border-radius: 6px;
+            max-width: 50%;
+            height: 70vh;
+            border: none; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 14px;
+            margin: auto;
+            margin-top: 70px;
+        }
+        h2{
+            font-size: 50px;
+        }
+        button{
+            font-size: 20px;
+        }
+        }
+     @media only screen and (max-width: 600px){
+        .box{
+            background-color: white;
+            border-radius: 6px;
+            max-width: 50%;
+            height: 50vh;
+            border: 1px solid green;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 14px;
+            margin: auto;
+            
+            margin-top: 50%;
+        }
+        h2{
+            font-size: 20px;
+        }
+        button{
+            font-size: 10px;
+        }
+     }   
+
+     button{
+        background-color: rgb(176, 238, 115);
+        border:none; 
+        padding: 10px; 
+        border-radius: 8px; 
+        margin: 5px; 
+     }
+
+        body{
+            background-color: yellowgreen;
+        }
+
+       
+        h1{
+          padding-top: 0px;
+          margin-top: 0px;  
+        }
+       
+
+       
+
+    </style>
+
+</head>
+<body>
+    <main>
+    <div class="box">
+        <h1>Counter</h1>
+        <h2 id="counter">
+            0
+        </h2>
+        <div class="buttons">
+            <button onclick="increase()">Increase</button>
+            <button onclick="decrease()">Decrease</button>
+        </div>
+    </div>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
