@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            padding: 10px;
+            height: 40px;
+            width: 80px;
+        }
+
+        #red:hover{
+            background-color: red;
+        }
+
+        #green:hover{
+            background-color: green;
+        }
+
+        #blue:hover{
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h2>Color Clipper</h2>
+    <button id="red" onclick="setColor('red')">Red</button>
+    <button id="green" onclick="setColor('green')">Green</button>
+    <button id="blue" onclick="setColor('blue')">Blue</button>
+    <button onclick="randomColor()">Random</button>
+<script src="main.js"></script>
+</body>
+</html>
