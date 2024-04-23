@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>
+            Temprature Converter
+        </h2>
+        <div class="form">
+            <div class="form-group">
+                <label for="number">Celsius</label>
+                <input name="celsius" id="celsius" type="number" autocomplete="off" oninput="updateCelcuis()">
+            </div>
+            <div class="form-group">
+                <label for="text">Fahrenhiet</label>
+                <input type="number"  id="farenhiet" name="farenhiet" autocomplete="off" oninput="updateFarenhiet()"> 
+            </div>
+            <div class="form-group">
+                <label for="text">Kelvin</label>
+                <input type="number" id="kelvin" name="kelvin" autocomplete="off" oninput="updateKelvin()">
+            </div>   
+            <!-- <button type="button" id="btn" class="form-submit-btn">Clear All</button>          -->
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <footer>
+        &copy;Copyright Mahmood Hashemi
+    </footer>
+</body>
+
+</html>
