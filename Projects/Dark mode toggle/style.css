@@ -58,3 +58,8 @@ input:checked + .slider:before {
   box-shadow: inset 10px -4px 0px 15px #fff000;
 }
 
+footer{
+  position: fixed;
+  bottom: 0px;
+}
+

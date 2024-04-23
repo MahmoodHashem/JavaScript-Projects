@@ -12,5 +12,13 @@ Each project is carefully selected to cover different aspects of JavaScript deve
      - [Color Flipper Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/Color%20Flipper/index.html)
 3. **Counter**
    This project features a display area to show the current count and buttons to increase or decrease the count. JavaScript is used to  update the count in response to button clicks.
-   - [Counter Live Site](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/counter/index.html)
-   
+   - [Counter Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/counter/index.html)
+4. **Temprature Converter**
+   This project aims to create a temperature converter. The final version of the project includes three inputs for Celsius, Fahrenheit, and Kelvin temperature formats. When you change any of these inputs, for example, if you choose 100 degrees Celsius, you will see the equivalent Celsius value in Fahrenheit and Kelvin formats. Additionally, if you change one input, you will see a real-time change inside the other inputs.
+   - [Temprature Converter Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/Temprature Converter/index.html)
+5. **Dark Mode Toggle**
+   A toggle button that switches the website between dark and light modes, with a sliding animation for a more visually appealing transition.  
+   - [Dark Mode Toggle Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/Dard mode toggle/index.html) 
+6. **Character Counter**
+   This project is a character counter app which typically allows users to input text and then displays the number of characters that have been entered.
+   - [Character Counter Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/Character Countr/index.html)
