@@ -1,0 +1,47 @@
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #61C7F5;
+}
+
+
+.box{
+    background-color: #DBE9F3;
+    max-width:350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding:40px; 
+    border-radius: 10px;
+    
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    margin:0px; 
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+textarea{
+    padding: 10px; 
+    font-size: 14px;
+}
+
+p{
+    display: inline-block; 
+    margin-top: 10px;
+}
+#count{
+    color: red
+}
+
