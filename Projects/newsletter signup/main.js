@@ -7,8 +7,6 @@ let disbtn = document.querySelector('.dismiss');
 let gmail = document.querySelector("#gmail"); 
 let invalid = document.querySelector(".invalid"); 
 
-
-// btn.addEventListener('click', showMessage()); 
 function showMessage(){
      let emailInput = document.getElementById('input-email');
     if(isValidEmail(emailInput.value)){
