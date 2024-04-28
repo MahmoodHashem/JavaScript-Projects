@@ -1,32 +1,39 @@
 
-// const year = document.getElementById('year');
-// let days = document.getElementById('day');
-// let hour = document.getElementById('hour');
-// let min = document.getElementById('min');
+let daysE = document.getElementById('day');
+let hourE = document.getElementById('hour');
+let minE = document.getElementById('min');
+let secE  = document.getElementById('sec'); 
 
 
 const newYearTime = new Date("Mar 20, 2025 00:00:00").getTime();
-const now = new Date().getTime(); 
 
-console.log("New Year " + newYearTime); 
-console.log("Now " + now); 
+function updateCountDown(){
+    const now = new Date().getTime();  
 
 const gap = newYearTime - now; 
 
-console.log("the gap " + gap); 
 
-const second = 1000;
-const minute = second * 60;
-const hour = minute * 60;
-const day = hour * 24;
+const secondInMill = 1000;
+const minuteInMill = secondInMill * 60;
+const hourInMill = minuteInMill * 60;
+const dayInMill = hourInMill * 24;
 
-const d = Math.floor(gap / day);
-const h = Math.floor((gap % day) / hour);
-const m = Math.floor((gap % hour) / minute);
-const s = Math.floor((gap % minute) / second);
+const d = Math.floor(gap / dayInMill);
+const h = Math.floor((gap % dayInMill) / hourInMill);
+const m = Math.floor((gap % hourInMill) / minuteInMill);
+const s = Math.floor((gap % minuteInMill) / secondInMill);
 
-console.log(d + "days," + h + "Hours," + m + "minutes and" + s + "seconds are remained to 2025"); 
+    secE.innerHTML = `${s}<div style="font-size: 15px;">ثانیه</div>`; 
+    minE.innerHTML = `${m}<div style="font-size: 15px;">دقیقه</div>`; 
+    hourE.innerHTML = `${h}<div style="font-size: 15px;">ساعت</div>`;
+    daysE.innerHTML = `${d}<div style="font-size: 15px;">روز</div>`;
+    
+    
+}
 
+
+
+setInterval(updateCountDown, 1000); 
 
 function convertTo12HourFormat(time) {
     let hours = time;

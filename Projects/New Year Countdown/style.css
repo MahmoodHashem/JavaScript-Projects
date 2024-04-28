@@ -1,7 +1,15 @@
 
 
+
+@font-face {
+    font-family: Mehr;
+    src: url(./fonts/SASEMAN.TTF);
+}
+
+
 *{
-    font-family: cursive;;
+    font-family: Mehr, sans-serif;
+    margin: 0px;
 }
 
 body{
@@ -41,16 +49,19 @@ body{
 
 h1{
     text-align: center;
+    font-size: 70px;
 }
 
 .year{
-    margin-top: 20px;
-    font-size: 50px;
+    font-size: 80px;
     color: white;
     text-align: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 
 .ountdown-item {
-    margin: 5px 10px;
+    margin: 0px; 
+    font-size: 40px;
 }
