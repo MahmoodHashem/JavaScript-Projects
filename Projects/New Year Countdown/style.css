@@ -1,0 +1,56 @@
+
+
+*{
+    font-family: cursive;;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(235, 18%, 26%);
+}
+
+.card{
+    background-color: #6B5ACD;
+    max-width: 500px;
+    height: 300px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 70px;
+    margin: 30px;
+    border-radius: 15px;
+}
+.countdown{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 20%;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding: 5px 70px ;
+}
+
+h1{
+    text-align: center;
+}
+
+.year{
+    margin-top: 20px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+
+.ountdown-item {
+    margin: 5px 10px;
+}
