@@ -22,3 +22,12 @@ Each project is carefully selected to cover different aspects of JavaScript deve
 6. **Character Counter**
    This project is a character counter app which typically allows users to input text and then displays the number of characters that have been entered.
    - [Character Counter Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/Character%20Countr/index.html)
+7. **New Year Countdown**
+     The New Year Countdown Timer is a JavaScript-based application designed to dynamically display the time remaining until the start of the next Solar year.
+      - [New Year Countdown Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/New%20Year%20Countdown/index.html)
+8. **Newsletter Sign up** 
+      This is a responsive newsletter sign-up form that enhances user interaction and data validation. It allows users to enter their email and submit it to subscribe to a newsletter. Upon successful submission, users receive a  confirmation message displaying their email. The form includes validation checks to ensure the email field is not left empty and that the entered email is in a correct format.
+      - [New Year Countdown Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/newsletter%20signup/index.html)
+
+   
+   ....Continue Adding projects
