@@ -10,45 +10,43 @@
 
 <body>
     <div class="card">
-        <input type="number" id="input">
+       <div class="output input">
+        <div class="pre" data-previous-operand>123+</div>
+        <div class="current" data-current-operand>345</div>
+       </div>
         <div class="row">
-            <div class="circle" id="circle-1" role="button">Clr</div>
-            <div class="circle" id="circle-2">Del</div>
-            <div class="circle" id="circle-3">%</div>
-            <div class="circle" id="circle-4">/</div>
+            <div class="circle"  data-all-clear>AC</div>
+            <div class="circle" data-delete>Del</div>
+            <div class="circle" data-opeartion>%</div>
+            <div class="circle" data-operation>/</div>
         </div>
         <div class="row">
-            <div class="circle" id="circle-5">7</div>
-            <div class="circle" id="circle-6">8</div>
-            <div class="circle" id="circle-7">9</div>
-            <div class="circle" id="circle-8">*</div>
+            <div class="circle" data-number>7</div>
+            <div class="circle" data-number>8</div>
+            <div class="circle" data-number>9</div>
+            <div class="circle"  data-operation>*</div>
         </div>
         <div class="row">
-            <div class="circle" id="circle-9">4</div>
-            <div class="circle" id="circle-10">5</div>
-            <div class="circle" id="circle-11">6</div>
-            <div class="circle" id="circle-12">-</div>
+            <div class="circle" data-number>4</div>
+            <div class="circle" data-number>5</div>
+            <div class="circle" data-number >6</div>
+            <div class="circle" data-operation>-</div>
         </div>
         <div class="row">
-            <div class="circle" id="circle-13">1</div>
-            <div class="circle" id="circle-14">2</div>
-            <div class="circle">3</div>
-            <div class="circle">+</div>
+            <div class="circle" data-number >1</div>
+            <div class="circle" data-number >2</div>
+            <div class="circle" data-number>3</div>
+            <div class="circle" data-operation>+</div>
         </div>
         <div class="row">
-            <div class="circle decimal" >.</div>
-            <div class="circle zero" >0</div>
-            <div class="circle "id='equation'>=</div>
-            
+            <div class="circle decimal" data-number>.</div>
+            <div class="circle zero" data-number>0</div>
+            <div class="circle" id="equation" data-equals>=</div>
+
         </div>
     </div>
 
-    <script>
-
-
-      
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
