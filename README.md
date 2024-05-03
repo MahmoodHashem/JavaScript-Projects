@@ -28,6 +28,8 @@ Each project is carefully selected to cover different aspects of JavaScript deve
 8. **Newsletter Sign up** 
       This is a responsive newsletter sign-up form that enhances user interaction and data validation. It allows users to enter their email and submit it to subscribe to a newsletter. Upon successful submission, users receive a  confirmation message displaying their email. The form includes validation checks to ensure the email field is not left empty and that the entered email is in a correct format.
       - [New Year Countdown Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/newsletter%20signup/index.html)
-
+9. **Calculator** 
+      This project is a simple calculator built using HTML, CSS, and JavaScript. It is designed to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator features a clean, user-friendly interface that allows users to input numbers and operations easily to see the results displayed on the screen.
+      - [Calculator Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/calculator/index.html)
    
    ....Continue Adding projects
