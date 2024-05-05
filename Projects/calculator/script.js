@@ -48,6 +48,9 @@ class Calculator {
                 break;
             case '/':
                 computation = pre / current;
+                break; 
+            case '%': 
+                computation =(pre * current) / 100;     
             default:
                 return;
         }
