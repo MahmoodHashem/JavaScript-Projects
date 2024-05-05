@@ -56,6 +56,10 @@ body{
   .description{
     height: 100px;
     overflow: hidden;
+    width: auto;
+    text-overflow: ellipsis;
+   
+    overflow: hidden;
   }
 
   a {
@@ -72,6 +76,8 @@ body{
     margin: 0px;
     margin-top: 10px;
     font-family: sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .navbar h2{
     margin-left: 20px;
@@ -124,4 +130,3 @@ body{
   .navbar.active {
     background-color: black;
   }
-  
