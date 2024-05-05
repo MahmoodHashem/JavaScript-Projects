@@ -50,7 +50,8 @@ class Calculator {
                 computation = pre / current;
                 break; 
             case '%': 
-                computation =(pre * current) / 100;     
+                computation =(pre * current) / 100; 
+                break;     
             default:
                 return;
         }

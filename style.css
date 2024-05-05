@@ -84,11 +84,12 @@ body{
   }
   img {
     max-width: 270px;
+    
     scale: 1;
     border-radius: 10px;
   }
   img:hover {
-    scale: 1.2;
+    scale: 1.01;
   }
 
   strong{
