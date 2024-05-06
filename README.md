@@ -31,5 +31,13 @@ Each project is carefully selected to cover different aspects of JavaScript deve
 9. **Calculator** 
       This project is a simple calculator built using HTML, CSS, and JavaScript. It is designed to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator features a clean, user-friendly interface that allows users to input numbers and operations easily to see the results displayed on the screen.
       - [Calculator Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/calculator/index.html)
+
+10. **Mouse Position** 
+      The Mouse Position Tracker is a lightweight, interactive JavaScript application designed to provide real-time tracking of the mouse cursor's position on the screen.  
+      - [Mouse Position Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/Mouse%20position)
+11. **Image Slider** 
+      [Image Slider Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/image_slider/index.html)
+12. **Number Count** 
+      [Number Count Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/number-count/index.html)      
    
    ....Continue Adding projects
