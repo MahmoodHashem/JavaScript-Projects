@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Counting</title>
+    <script src="https://kit.fontawesome.com/4918651d8f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <i class="fas fa-utensils"></i>
+            <span class="num" data-val="400">000</span>
+            <span class="text">Meal Delivers</span>
+        </div>
+        <div class="container">
+            <i class="fas fa-smile-beam"></i>
+            <span class="num" data-val="340">000</span>
+            <span class="text">Happy Customer</span>
+        </div>
+        <div class="container">
+            <i class="fas fa-list"></i>
+            <span class="num" data-val="225">000</span>
+            <span class="text">Menu Items</span>
+        </div>
+        <div class="container">
+            <i class="fas fa-star"></i>
+            <span class="num" data-val="280">000</span>
+            <span class="text">Five Starts</span>
+        </div>
+   
+    </div>
+    
+    <script>
+
+        let numbers = document.querySelectorAll('.num');
+        let interval = 5000; 
+
+        numbers.forEach((number) =>{
+            let startValue = 0; 
+            let endValue = number.getAttribute("data-val"); 
+
+            let duration = Math.floor(interval / endValue); 
+           
+            let counter = setInterval(() => {
+                 startValue += 1; 
+                 number.textContent = startValue; 
+                 if(startValue == endValue){
+                    clearInterval(counter); 
+                 }
+            }, duration);
+
+        })
+
+    </script>
+
+
+</body>
+
+</html>
