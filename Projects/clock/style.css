@@ -1,0 +1,300 @@
+
+
+
+
+
+
+
+@media screen and (min-width: 651px) {
+
+:root{
+
+    --clock-length:500px; 
+}
+
+li{
+    font-size: 50px;
+}
+
+.hour{
+    width: 10px;
+    height: 150px;
+}
+
+.hour::after{
+    width: 10px;
+    height: 40px;
+}
+
+
+.minute{
+    width: 5px;
+    height: 180px;
+}
+
+.minute::after{
+    width: 6px;
+    height: 40px;
+}
+.second{
+    width: 4px;
+    height: 200px;
+}
+
+.second::after{
+    width: 4px;
+    height: 40px;
+}
+    
+
+}
+
+
+@media  screen and (max-width: 650px) {
+:root{
+
+    --clock-length:300px; 
+
+}
+
+li{
+    font-size: 25px;
+}
+
+.hour{
+    width: 10px;
+    height: 100px;
+}
+
+.hour::after{
+    width: 10px;
+    height: 20px;
+}
+
+
+.minute{
+    width: 6px;
+    height: 100px;
+}
+
+.minute::after{
+    width: 6px;
+    height: 20px;
+}
+
+.second{
+    width: 4px;
+    height: 100px;
+}
+
+.second::after{
+    width: 4px;
+    height: 20px;
+}
+    
+}
+
+
+.wrapper{
+    width: 100vw;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+.clock{
+    width: var(--clock-length);
+    background-color: white;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.clock-border{
+    padding: 25px;
+    background-color: black;
+}
+
+
+li{
+    position: absolute;
+    list-style: none;
+    height: 100%;
+    transform-origin: center;
+}
+
+
+li:nth-child(1){
+    rotate: 30deg;
+}
+
+li:nth-child(1) div{
+    rotate: -30deg;
+}
+
+li:nth-child(2){
+    rotate: 60deg;
+}
+
+li:nth-child(2) div{
+    rotate: -60deg;
+}
+
+
+li:nth-child(3){
+    rotate: 90deg;
+}
+
+li:nth-child(3) div{
+    rotate: -90deg;
+}
+
+li:nth-child(4){
+    rotate: 120deg;
+}
+
+li:nth-child(4) div{
+    rotate: -120deg;
+}
+
+li:nth-child(5){
+    rotate: 150deg;
+}
+
+li:nth-child(5) div{
+    rotate: -150deg;
+}
+
+
+li:nth-child(6){
+    rotate: 180deg;
+}
+
+li:nth-child(6) div{
+    rotate: -180deg;
+}
+
+
+
+li:nth-child(7){
+    rotate:  210deg;
+}
+
+li:nth-child(7) div{
+    rotate: -210deg;
+}
+
+
+
+li:nth-child(8){
+    rotate: 240deg;
+}
+
+li:nth-child(8) div{
+    rotate: -240deg;
+}
+
+
+
+li:nth-child(9){
+    rotate: 270deg;
+}
+
+li:nth-child(9) div{
+    rotate: -270deg;
+}
+li:nth-child(10){
+    rotate: 300deg;
+}
+
+li:nth-child(10) div{
+    rotate: -300deg;
+}
+li:nth-child(11){
+    rotate: 330deg;
+}
+
+li:nth-child(11) div{
+    rotate: -330deg;
+}
+li:nth-child(12){
+    rotate: 360deg;
+}
+
+li:nth-child(12) div{
+    rotate: -360deg;
+}
+
+
+.coder{
+  position: absolute;
+  top: 100px;
+}
+
+
+@keyframes rotate {
+
+    100%{
+        rotate: 360deg;
+    }
+    
+}
+
+
+.hour{
+    background-color: black;
+    border-radius: 40px;
+    position: absolute;
+    bottom: calc(var(--clock-length) / 2);
+    animation: rotate 216000s infinite;
+    transform-origin: bottom;
+}
+
+.hour::after{
+    background-color: rgb(0, 0, 0);
+    display: block;
+    position: absolute;
+    top: 100%;
+    content: "";
+}
+
+
+.minute{
+    background-color: black;
+    border-radius: 40px;
+    position: absolute;
+    bottom: calc(var(--clock-length) / 2);
+    animation: rotate 3600s infinite;
+    transform-origin: bottom;
+}
+
+.minute::after{
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 100%;
+    content: "";
+}
+
+.second{
+    background-color: red;
+    border-radius: 40px;
+    position: absolute;
+    bottom: calc(var(--clock-length) / 2);
+    animation: rotate 60s steps(60, end) infinite;
+    transform-origin: bottom;
+}
+
+.second::after{
+    background-color: red;
+    display: block;
+    position: absolute;
+    top: 100%;
+    content: "";
+}
+
