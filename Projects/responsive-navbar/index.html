@@ -1,0 +1,52 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li><img onclick="hideSideBar()" src="icons/close.svg" alt=""></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Aboud</a></li>
+            <li><a href="#">Exit</a></li>
+            
+        </ul>
+        <ul>
+            <li><a  href="#">Mahmood</a></li>
+            <li><a  class="hiddenlink" href="#">Blog</a></li>
+            <li><a  class="hiddenlink"href="#">Home</a></li>
+            <li><a class="hiddenlink" href="#">Aboud</a></li>
+            <li><a  class="hiddenlink"href="#">Exit</a></li>
+            <li><img onclick="showSideBar()" class="menu" src="icons/menu.svg" alt=""></li>
+        </ul>
+    </nav>
+
+    <script>
+
+        
+            const sidebar = document.querySelector('.sidebar'); 
+
+            function showSideBar(){
+                sidebar.style.display = 'flex'; 
+            }
+
+
+            function hideSideBar(){
+                sidebar.style.display = 'none'; 
+            }
+            
+        
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background: url(book.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.335);
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+    height: 50px;
+    font-size: 20px;
+}
+
+nav a, img {
+    height: 100%;
+    display: flex;
+    padding: 0 30px;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+
+nav a:hover{
+    background-color: grey;
+}
+
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+
+nav .sidebar{
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh; 
+    width: 250px;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    color: white;
+   
+}
+
+
+.sidebar img{
+    position: relative;
+    left: 60%;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .hiddenlink{
+        display: none;
+    }
+    
+
+    .menu{
+        display: inline;
+    }
+
+}
+
+
+@media screen and (min-width: 601px) {
+    .menu{
+        display: none;
+    }
+    
+}
