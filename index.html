@@ -6,19 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Projects</title>
   <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
+  <ul class="sidebar">
+    <li><img onclick="hideSideBar()" src="./Projects/responsive-navbar/icons/close.svg" alt=""></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="./about/About/index.html">About</a></li>
+    <li><a href="./about/Social links profile/index.html">Contact</a></li>
+  </ul>
 
-  <div class="navbar">
-    <h2> My <strong>JS</strong> Projects</h2>
-
+  <nav class="navbar">
     <ul>
+      <li><a href="#home" class="logo">
+          <h2> My <strong>JS</strong> Projects</h2>
+        </a></li>
       <li><a href="#home">Home</a></li>
-      <li><a href="./about/About/index.html" target="_blank">About</a></li>
-      <li><a href="./about/Social links profile/index.html" target="_blank">Contact</a></li>
+      <li><a href="./about/About/index.html">About</a></li>
+      <li><a href="./about/Social links profile/index.html">Contact</a></li>
+      <li><img onclick="showSideBar()" class="menu" src="./Projects/responsive-navbar/icons/menu.svg" alt=""></li>
     </ul>
-  </div>
+  </nav>
 
   <div class="grid-container" id="home">
 
@@ -316,10 +325,27 @@
         </div>
       </div>
     </div>
-
-
   </div>
 
+
+  <!--
+    Script code
+  -->
+
+  <script defer>
+    
+    const sidebar = document.querySelector('.sidebar');
+
+    function showSideBar() {
+      sidebar.style.display = 'flex';
+      console.log('hi')
+    }
+    function hideSideBar() {
+      sidebar.style.display = 'none';
+    }
+  </script>
+
+  <!---->
 
 </body>
 
