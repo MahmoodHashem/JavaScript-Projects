@@ -152,7 +152,7 @@ nav li:first-child {
 
 .sidebar{
   display: none;
-  position: absolute;
+  position: fixed;
   flex-direction: column;
   z-index: 2; 
   width: 50%;
