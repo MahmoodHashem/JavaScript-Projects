@@ -38,6 +38,15 @@ Each project is carefully selected to cover different aspects of JavaScript deve
 11. **Image Slider** 
       [Image Slider Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/image_slider/index.html)
 12. **Number Count** 
-      [Number Count Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/number-count/index.html)      
+      [Number Count Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/number-count/index.html)  
+
+13. **Responsive Navbar**
+   [Responsive Navber Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/responsive-navbar/index.html)
+
+14. **Age Calculator**
+   [Age Calculator Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/age_calculator/index.html)    
+
+15. **Clock**
+    [Clock Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/clock/index.html)
    
    ....Continue Adding projects
