@@ -32,12 +32,15 @@
 
         
             const sidebar = document.querySelector('.sidebar'); 
-
             function showSideBar(){
                 sidebar.style.display = 'flex'; 
+                sidebar.style.animation = 'apear .3s'
+                sidebar.style.animationFillMode = 'forwards'
             }
             function hideSideBar(){
                 sidebar.style.display = 'none'; 
+                sidebar.style.animation = 'disapear 1s';  
+                
             }
 
     </script>

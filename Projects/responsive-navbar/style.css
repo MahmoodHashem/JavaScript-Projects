@@ -59,10 +59,23 @@ nav .sidebar{
     top: 0;
     right: 0;
     height: 100vh; 
-    width: 250px;
-
+    width: 0px;
     backdrop-filter: blur(10px);
+    animation: disapear 1s;
 }
+
+
+@keyframes apear {
+    from{width: 0px;}
+    to{width: 250px;}   
+}
+
+@keyframes disapear {
+    from{width: 250px;}
+    to{width: 0px;}
+}
+
+
 
 
 .sidebar li{

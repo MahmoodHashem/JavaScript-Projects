@@ -162,8 +162,9 @@ nav li:first-child {
   height: 100vh;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  transition: 2s;
+
 }
+
 
 .sidebar li {
   display: flex;
