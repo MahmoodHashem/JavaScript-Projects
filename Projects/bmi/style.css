@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./imges/bg.png);
+}
+
+.card {
+  background-color: white;
+  display: inline-flex;
+  border-radius: 15px;
+  font-family: Roboto, sans-serif;
+}
+
+.form {
+  padding: 20px;
+}
+
+
+.label label{
+   margin-right: 40px;
+}
+
+.gender label{
+    margin-right: 10px;
+}
+
+.height label{
+    margin-right: 24px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  box-sizing: border-box;
+}
+
+#unit {
+  background-color: #707578;
+  border: 3px solid #707578;
+  padding: 10px;
+}
+
+#unit input {
+  border: none;
+  outline: none;
+  padding: 10px; 
+  background-color: white;
+  cursor: pointer;
+  margin: 0;
+  width: 100px;
+}
+
+#unit input:first-child {
+  background-color: #707578;
+}
+
+
+.age input {
+  padding: 10px;
+
+  width: 200px;
+  outline: none;
+  border: 2px solid #707578;
+}
+
+[for="gender"] {
+  padding-right: 5px;
+}
+
+.height input {
+  padding: 10px;
+  width: 90px;
+  border: 2px solid #707578;
+}
+
+.weight input {
+  padding: 10px;
+  width: 200px;
+
+  border: 2px solid #707578;
+}
+
+
+.form button{
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.photo img {
+  width: 400px;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
