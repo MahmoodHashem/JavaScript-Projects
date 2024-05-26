@@ -6,10 +6,22 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url(./imges/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
 }
 
+
+@media all and (max-width: 750px) {
+  .photo img{
+    display: none;
+  }
+}
+
+
 .card {
-  background-color: white;
+  background-color: #0E46A3;
   display: inline-flex;
   border-radius: 15px;
   font-family: Roboto, sans-serif;
@@ -17,86 +29,112 @@ body {
 
 .form {
   padding: 20px;
-}
-
-
-.label label{
-   margin-right: 40px;
-}
-
-.gender label{
-    margin-right: 10px;
-}
-
-.height label{
-    margin-right: 24px;
-}
-
-.form form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 80%;
-  box-sizing: border-box;
+  align-items: center;
 }
-
-#unit {
-  background-color: #707578;
-  border: 3px solid #707578;
-  padding: 10px;
-}
-
-#unit input {
-  border: none;
-  outline: none;
-  padding: 10px; 
-  background-color: white;
-  cursor: pointer;
-  margin: 0;
-  width: 100px;
-}
-
-#unit input:first-child {
-  background-color: #707578;
-}
-
-
-.age input {
-  padding: 10px;
-
-  width: 200px;
-  outline: none;
-  border: 2px solid #707578;
-}
-
-[for="gender"] {
-  padding-right: 5px;
-}
-
-.height input {
-  padding: 10px;
-  width: 90px;
-  border: 2px solid #707578;
-}
-
-.weight input {
-  padding: 10px;
-  width: 200px;
-
-  border: 2px solid #707578;
-}
-
-
-.form button{
-    padding: 10px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
 .photo img {
+
   width: 400px;
   height: 100%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+label{
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  
+}
+
+
+.height{
+
+  display: flex;
+  flex-direction: column;
+}
+
+.weight{
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1, label{
+  color: white;
+}
+
+.error{
+  display: none;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: rgba(255, 0, 0, 0.591); 
+}
+
+.input{
+  position: relative;
+}
+
+input{
+  padding: 10px 40px 10px 10px;
+  width: 200px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: -2px 5px 8px rgba(0, 0, 0, 0.46);
+}
+
+
+.prefix{
+  font-size: 20px;
+  position: absolute;
+  right: 10px; 
+  top: 20%; 
+  opacity: .7;
+}
+
+.button{
+  width: 200px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  text-align: center;
+  outline: none;
+  box-shadow: -2px 5px 8px rgba(0, 0, 0, 0.445);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+ 
+}
+
+.result-container h2{
+  margin: 5px;
+  font-size: 20px;
+}
+
+.result-container .num{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+.result-container{
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+

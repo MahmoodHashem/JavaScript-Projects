@@ -20,44 +20,40 @@
         <div class="form">
             <h1>Calculate Body Mass Index</h1>
             <form action="">
-                <div class="unit label">
-                    <label for="unit">Unit</label>
-                    <span id="unit">
-                        <input type="button" value="Standart">
-                        <input type="button" value="Metric">
-                    </span>
-                </div>
-                <div class="age label">
-                    <label for="age">Age</label>
-                    <input type="label" placeholder="Age">
-                </div>
-                <div class="gender label">
-                    <label for="gender">Gender</label>
-                    <span class="gender">
-                       <input type="radio" name="gender" checked  value="male" id="male">
-                        <label for="male">Male</label>
-                        <input type="radio" name="gender" value="female" id="female">
-                        <label for="female">Female</label>
-                    </span>
-                </div>
-                <div class="height label">
+                <div class="height">
                     <label for="height">Height</label>
-                    <input type="number" placeholder="feet" id="height">
-                    <input type="number" placeholder="inches" id="height">
+                    <div class="input">
+                        <input type="number" id="height" maxlength="3">
+                    <span class="prefix">cm</span>
+                    </div>
+                    <div class="error">
+                        Please, Enter your height
+                    </div>
                 </div>
-                <div class="weight label">
-                    <label for="Weigth">Weigth</label>
-                    <input type="number" placeholder="pounds">
+                <div class="weight">
+                    <label for="weigth">Weight</label>
+                    <div class="input">
+                        <input type="number" id="weight" required maxlength="3">
+                    <span class="prefix">kg</span>
+                    </div>
+                    <div class="error" >
+                        Please, Enter your weight
+                    </div>
                 </div>
-                <button>Calculate</button>
+                <div class="button" onclick="calculate()">Calculate</div>
             </form>
+            <div class="result-container">
+                <h2>Your BMI is</h2>
+                <div class="num"></div>
+                <div class="result"></div>
+            </div>
         </div>
         <div class="photo">
             <img src="./imges/body.jpg" alt="">
         </div>
     </div>
 
-
+<script src="script.js"></script>
 
 </body>
 
