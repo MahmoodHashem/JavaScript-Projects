@@ -1,11 +1,4 @@
 @media only screen and (min-width: 701px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    column-gap: 10px;
-    margin-left: 30px;
-  }
-
   .menu {
     display: none;
   }
@@ -15,12 +8,6 @@
 }
 
 @media only screen and (max-width: 700px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-  }
-
   nav a:not(.logo) {
     display: none;
   }
@@ -39,6 +26,13 @@ body {
   background-color: antiquewhite;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+  gap: 20px 10px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -49,7 +43,6 @@ body {
   background-color: white;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  margin-top: 100px;
 }
 
 .card:hover {
@@ -116,15 +109,19 @@ strong {
 nav {
   background-color: white;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.335);
-  position: fixed;
+  position: sticky;
+  top: 0;
+  padding: 15px 10px;
+  margin-bottom: 20px;
   z-index: 1;
-  width: 100%;
 }
 
 nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -162,17 +159,17 @@ nav li:first-child {
   height: 100vh;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  animation: apear .2s;
+  animation: apear 0.2s;
 }
 
-@keyframes apear {  
-    from{width: 0%;}
-    to{
-      width: 50%;
-    }
-  
+@keyframes apear {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
 }
-
 
 .sidebar li {
   display: flex;
@@ -193,11 +190,15 @@ nav li:first-child {
 }
 
 @keyframes icon {
-  form{opacity: 0;}
-  to{opacity: 1;}  
+  form {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.sidebar img{
+.sidebar img {
   width: 50px;
 }
 

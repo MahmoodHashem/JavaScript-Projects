@@ -49,6 +49,6 @@ Each project is carefully selected to cover different aspects of JavaScript deve
 15. **Clock**
     [Clock Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/clock/index.html)
 16. **BMI Calculator**
-    [Clock Live Demo](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/bmi)
+    [BMI Calculator](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/bmi)
    
    ....Continue Adding projects
