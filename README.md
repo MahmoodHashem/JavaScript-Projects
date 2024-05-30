@@ -55,5 +55,8 @@ Each project is carefully selected to cover different aspects of JavaScript deve
 14. [**Advice Generator**](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/bmi)  
      This project is an advice generator created using HTML, CSS, and JavaScript.The project combines front-end
     technologies to provide users with random advice each time they interact with the dice icon.
+15. [**Dice Game**](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/Dice)  
+     
+
 
 ....Continue Adding projects
