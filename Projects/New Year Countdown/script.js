@@ -7,12 +7,15 @@ let secE  = document.getElementById('sec');
 
 const newYearTime = new Date("Mar 20, 2025 00:00:00").getTime();
 
-function updateCountDown(){
-    const now = new Date().getTime();  
 
+
+
+function updateCountDown(){
+const audio = new Audio('tiktak.wav'); 
+const now = new Date().getTime();  
 const gap = newYearTime - now; 
 
-
+audio.play()
 const secondInMill = 1000;
 const minuteInMill = secondInMill * 60;
 const hourInMill = minuteInMill * 60;
@@ -32,8 +35,8 @@ const s = Math.floor((gap % minuteInMill) / secondInMill);
 }
 
 
+window.onload = setInterval(updateCountDown, 1000); 
 
-setInterval(updateCountDown, 1000); 
 
 function convertTo12HourFormat(time) {
     let hours = time;
