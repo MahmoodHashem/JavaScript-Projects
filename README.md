@@ -57,6 +57,7 @@ Each project is carefully selected to cover different aspects of JavaScript deve
     technologies to provide users with random advice each time they interact with the dice icon.
 15. [**Dice Game**](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/Dice)  
      
+16. [**TicTacToe Game**](https://mahmoodhashem.github.io/JavaScript-Projects/Projects/TicTacToe) 
 
 
 ....Continue Adding projects
