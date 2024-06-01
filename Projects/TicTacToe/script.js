@@ -21,6 +21,11 @@ window.onload = function () {
     welcomModal.showModal();
 }
 
+/**
+ * Event listener for the start button click event.
+ * Updates player names based on input values or default names.
+ * Removes 'hide' class from player 1 turn indicator.
+ */
 startbtn.addEventListener('click', function () {
     if (input1.value !== '') {
         player1Name.insertAdjacentText("beforeend", input1.value); 
@@ -38,7 +43,10 @@ startbtn.addEventListener('click', function () {
 })
 
 
-
+/**
+ * Event listener for a button click event that closes the result modal and resets the game.
+ * This button is used when the game is over.
+ */
 btn.addEventListener('click', function () {
     modal.close();
     resetGame();
@@ -46,13 +54,29 @@ btn.addEventListener('click', function () {
 
 
 
+/**
+ * Check if the current player has won the game or if it is a tie.
+ * 
+ * @returns {boolean|string} Returns true if the current player has won, 'tie' if it is a tie, false otherwise.
+ */
 function checkWin() {
+
+    /**
+ * Array of arrays representing winning combinations in a tic-tac-toe game.
+ * Each sub-array contains the indexes of cells that form a winning combination.
+ * The combinations include rows, columns, and diagonals on a 3x3 board.
+ */
     const winningCombos = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
         [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
         [0, 4, 8], [2, 4, 6] // diagonals
     ];
 
+
+    /**
+ * Check if the current player has won the game by matching the winning combinations with the cells content.
+ * @returns {boolean} True if the current player has won.
+ */
     for (let combo of winningCombos) {
         if (
             cells[combo[0]].textContent === currentPlayer &&
@@ -70,6 +94,17 @@ function checkWin() {
     return false;
 }
 
+
+
+/**
+ * Handles the click event on a cell in the tic-tac-toe game.
+ * Changes the color of the cell based on the current player ('X' or 'O').
+ * Checks for a win or tie after each move and updates the game state accordingly.
+ * If the game is won by a player or ends in a tie, displays the result in a modal dialog.
+ * Switches the current player after each valid move.
+ * @param {Event} event - The click event object.
+ * @returns {void}
+ */
 function handleCellClick(event) {
 
     if (event.target.textContent !== '') {
@@ -107,6 +142,10 @@ function handleCellClick(event) {
     }
 }
 
+
+/**
+ * Resets the Tic Tac Toe game by clearing all cell contents, setting the current player back to 'X', and resetting the game over status to false.
+ */
 function resetGame() {
     cells.forEach(cell => cell.textContent = '');
     currentPlayer = 'X';
