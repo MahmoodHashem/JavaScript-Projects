@@ -40,6 +40,7 @@ startbtn.addEventListener('click', function () {
 
     }
     player1Turn.classList.remove('hide');
+    welcomModal.close()
 })
 
 
