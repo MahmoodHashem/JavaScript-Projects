@@ -1,0 +1,56 @@
+
+body{
+    background-color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider {
+  width: 90vw;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back,
+.next {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.image {
+  width: 90%;
+  height: 90%;
+  margin: 10px;
+  background-image: url(./images/1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.img-footer {
+  width: 100vw;
+  height: 200px;
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.thumbnail {
+  min-width: 150px;
+  min-height: 150px;
+  margin: 5px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

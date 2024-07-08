@@ -371,13 +371,26 @@
   <script defer>
 
     const sidebar = document.querySelector('.sidebar');
-
+    const body = document.querySelector('body'); 
+    let opened = false; 
     function showSideBar() {
       sidebar.style.right = '0';
+      body.classList.add('disable-scroll'); 
+      opened = true; 
+    }
+
+    if(opened){
+      body.addEventListener('click', function(){
+        sidebar.style.right = '-50%';
+      })
     }
     function hideSideBar() {
       sidebar.style.right = '-50%';
+      body.classList.remove('disable-scroll'); 
+      opened = false; 
     }
+
+    
   </script>
   <!---->
 </body>
