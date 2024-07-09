@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <style>
+        body {
+            background-color: #E5E8EF;
+        }
+
+        main {
+            padding: 10px 30px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 300px);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .priority {
+            padding: 5px;
+            color: white;
+            background-color: rgb(243, 71, 71);
+            margin: 0;
+            border-radius: 5px;
+            font-family: sans-serif;
+        }
+
+        .high {
+            background-color: rgb(243, 71, 71);
+        }
+
+        .low {
+            background-color: rgb(60, 182, 60);
+        }
+
+        .medium {
+            background-color: rgb(101, 101, 219);
+        }
+
+        h2 {
+            font-family: sans-serif;
+            margin-top: 0;
+        }
+
+
+        .add {
+            cursor: pointer;
+        }
+
+        .label {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #add-dialog h3 {
+            margin: 0;
+        }
+
+        #add-dialog {
+            padding: 20px;
+            border: none;
+            font-family: sans-serif;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.419);
+            border-radius: 10px;
+        }
+
+        #add-btn {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .priority-input {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btns button {
+            border: none;
+            padding: 10px;
+            border-radius: 7px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .btns button:hover {
+            opacity: 0.8;
+        }
+
+        .delete {
+            background-color: rgb(233, 69, 69);
+        }
+
+        .complete {
+            background-color: rgb(32, 195, 32);
+        }
+
+
+        .error-border {
+            border: 1px solid red;
+        }
+
+
+        .error-empty::after {
+            color: red;
+            content: "This field is required";
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Board</h1>
+        <div class="container">
+            <div class="todos">
+                <h2>To Do <span class="add todo">+</span></h2>
+                <div class="card">
+                    <div class="row">
+                        <h6 class="priority">High</h6>
+                        <p class="date">2/15/2024</p>
+                    </div>
+                    <h2 class="title">
+                        Update Website homepage
+                    </h2>
+                    <p class="details">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta ullam provident recusandae
+                        dicta minus tempore nihil quisquam officiis illum, delectus praesentium accusamus rerum quod
+                    </p>
+                    <div class="btns">
+                        <button class="delete">Delete</button>
+                        <button class="complete">Start</button>
+                    </div>
+                </div>
+            </div>
+            <div class="in-progress">
+                <h2>In Progress <span class="add progress">+</span></h2>
+                <div class="card">
+                    <div class="row">
+                        <h6 class="priority">High</h6>
+                        <p class="date">2/15/2024</p>
+                    </div>
+                    <h2 class="title">
+                        Update Website homepage
+                    </h2>
+                    <p class="details">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta ullam provident recusandae
+                        dicta minus tempore nihil quisquam officiis illum, delectus praesentium accusamus rerum quod
+                    </p>
+                    <div class="btns">
+                        <button class="delete">Delete</button>
+                        <button class="complete">Complete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="under-review">
+                <h2>Under Review <span class="add review">+</span></h2>
+                <div class="card">
+                    <div class="row">
+                        <h6 class="priority">High</h6>
+                        <p class="date">2/15/2024</p>
+                    </div>
+                    <h2 class="title">
+                        Update Website homepage
+                    </h2>
+                    <p class="details">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta ullam provident recusandae
+                        dicta minus tempore nihil quisquam officiis illum, delectus praesentium accusamus rerum quod
+                    </p>
+                    <div class="btns">
+                        <button class="delete">Delete</button>
+                        <button class="complete">Complete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="done">
+                <h2>Done <span class="add done">+</span></h2>
+                <div class="card">
+                    <div class="row">
+                        <h6 class="priority">High</h6>
+                        <p class="date">2/15/2024</p>
+                    </div>
+                    <h2 class="title">
+                        Update Website homepage
+                    </h2>
+                    <p class="details">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta ullam provident recusandae
+                        dicta minus tempore nihil quisquam officiis illum, delectus praesentium accusamus rerum quod
+                    </p>
+                    <div class="btns">
+                        <button class="delete">Delete</button>
+                        <button class="complete">Completed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <dialog id="add-dialog">
+                <h3 class="modal-title">Add Todo</h3>
+                <div class="date-input">
+                    <label for="date">Date</label>
+                    <input type="date" required id="date">
+                </div>
+                <div class="priority-input">
+                    <div class="low priority">
+                        <label for="low">Low</label>
+                        <input type="radio" required checked id="low" name="priority">
+                    </div>
+                    <div class="medium priority">
+                        <label for="medium">Medium</label>
+                        <input type="radio" required id="medium" name="priority">
+                    </div>
+                    <div class="high priority">
+                        <label for="high">High</label>
+                        <input type="radio" required id="high" name="priority">
+                    </div>
+                </div>
+                <div class="title-input label">
+                    <label for="title">Title</label>
+                    <input type="text" required id="title" placeholder="e.g: updage homepage">
+                </div>
+                <div class="details-input label">
+                    <label for="details">Details</label>
+                    <textarea cols="40" aria-valuemax="40" maxlength="100" name="details" id="details"></textarea>
+                </div>
+
+                <button type="submit" id="add-btn">Add</button>
+           
+        </dialog>
+    </main>
+
+
+    <script>
+        const adding = document.querySelectorAll('.add');
+        const addbtn = document.querySelector('#add-btn');
+
+        const todo = document.querySelector('.todos');
+        const done = document.querySelector('.done');
+        const review = document.querySelector('.under-review');
+        const progress = document.querySelector('.in-progress');
+
+        const modal = document.querySelector('#add-dialog');
+        const modalTitle = document.querySelector('.modal-title');
+
+        const titleToShow = document.querySelector('.title');
+        const inputTitle = document.querySelector('#title');
+
+
+        function Task(priority, date, title, details) {
+            return { priority, date, title, details }
+        }
+
+        let x = Task('Low', '2024', 'Mahmood', 'details');
+
+
+        let todos = [];
+        let inProgresses = [];
+        let underReviews = [];
+        let dones = [];
+
+
+        let toSave = 'todo';
+
+
+        adding.forEach(add => {
+            if (add.classList.contains('todo')) {
+                add.addEventListener('click', function () {
+                    modalTitle.textContent = 'Add Todo';
+                    console.log('open todo modal')
+                    modal.showModal();
+                })
+            } else if (add.classList.contains('review')) {
+                add.addEventListener('click', function () {
+                    modalTitle.textContent = 'Add Review';
+                    console.log('open review modal')
+                    toSave = 'review';
+                    modal.showModal();
+                })
+            } else if (add.classList.contains('progress')) {
+                add.addEventListener('click', function () {
+                    modalTitle.textContent = 'Add Progress';
+                    console.log('open progress modal')
+                    toSave = 'progress';
+                    modal.showModal();
+                })
+            } else {
+                add.addEventListener('click', function () {
+                    modalTitle.textContent = 'Add Done';
+                    console.log('open done modal')
+                    toSave = 'done';
+                    modal.showModal();
+                })
+            }
+
+
+        })
+
+        addbtn.addEventListener('click', function () {
+
+            if (toSave === 'done') {
+                dones.push(createCard(x.priority, x.date, x.title, x.details, 'Completed'));
+                console.log('save to done modal')
+                dones.forEach(task => {
+                    done.appendChild(task);
+                })
+            } else if (toSave === 'review') {
+                underReviews.push(createCard(x.priority, x.date, x.title, x.details, 'Complete'));
+                console.log('save to review modal')
+                underReviews.forEach( task =>{
+                    review.appendChild(task); 
+                })
+            }else if(toSave === 'progress'){
+                inProgresses.push(createCard(x.priority, x.date, x.title, x.details, 'Complete'))
+                inProgresses.forEach( task =>{
+                    progress.appendChild(task);
+                })
+                modal.close(); 
+            }else{
+                todos.push(createCard(x.priority, x.date, x.title, x.details, 'Start')); 
+                todos.forEach(task =>{
+                    todo.appendChild(task); 
+                })
+
+            }
+
+            modal.close(); 
+        }); 
+
+
+        function createCard(priority, date, title, details, btn) {
+
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            const row = document.createElement('div');
+
+
+            row.innerHTML = ` <div class="row">
+                        <h6 class="priority ${priority.toLowerCase()}">${priority}</h6>
+                        <p class="date">${date}</p>
+                    </div> `
+
+            card.appendChild(row);
+
+            const cardTitle = document.createElement('h2');
+            cardTitle.classList.add('title')
+            cardTitle.textContent = `${title}`
+
+            card.appendChild(cardTitle);
+
+            const cardDetails = document.createElement('p');
+            cardDetails.classList.add('details')
+            cardDetails.textContent = `${details}`;
+
+            card.appendChild(cardDetails);
+
+            const btns = document.createElement('div');
+            btns.classList.add('btns');
+
+            btns.innerHTML = `<button class="delete">Delete</button>
+                        <button class="complete">${btn}</button>`
+
+
+            return card;
+        }
+
+    </script>
+</body>
+
+</html>
