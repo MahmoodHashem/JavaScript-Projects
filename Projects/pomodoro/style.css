@@ -27,13 +27,17 @@ body{
 
 .circle{
     background-image: linear-gradient(to right, #ed709c, #ed896f); 
-    width: 200px;
-    height: 220px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+    height: 180px;
+    width: 180px;
+    align-content: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+p{
+    margin: 0;
+    padding: 0;
 }
 
 
