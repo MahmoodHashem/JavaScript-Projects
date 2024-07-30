@@ -61,15 +61,20 @@
             <label for="radio9" class="manual-btn"></label>
             <label for="radio10" class="manual-btn"></label>
         </div>
-
     </div>
-
-
     <script>
 
             const radio = document.querySelectorAll('.manual-btn');
 
-        let counter = 1; 
+            let counter = 1; 
+
+            radio.forEach((radio, i) =>{
+                radio.addEventListener('click', function(){
+                        counter = i + 1; 
+                })
+
+            })
+       
         setInterval(() => {
             document.getElementById('radio' + counter).checked = true; 
             counter++; 

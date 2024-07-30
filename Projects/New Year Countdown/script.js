@@ -26,10 +26,10 @@ const h = Math.floor((gap % dayInMill) / hourInMill);
 const m = Math.floor((gap % hourInMill) / minuteInMill);
 const s = Math.floor((gap % minuteInMill) / secondInMill);
 
-    secE.innerHTML = `${s}<div style="font-size: 15px;">ثانیه</div>`; 
-    minE.innerHTML = `${m}<div style="font-size: 15px;">دقیقه</div>`; 
-    hourE.innerHTML = `${h}<div style="font-size: 15px;">ساعت</div>`;
-    daysE.innerHTML = `${d}<div style="font-size: 15px;">روز</div>`;
+    secE.innerHTML = `<small>ثانیه</small>${s}`; 
+    minE.innerHTML = `<small >دقیقه</small>${m}`; 
+    hourE.innerHTML = `<small >ساعت</small>${h}`;
+    daysE.innerHTML = `<small>روز</small>${d}`;
     
     
 }

@@ -66,6 +66,14 @@ body {
   justify-content: center;
 }
 
+@media screen and (max-width: 400px) {
+  .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 button{
     border: none;
