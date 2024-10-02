@@ -1,16 +1,8 @@
 
+const inputs = document.querySelectorAll('input');
+const form = document.querySelector("form"); 
 
 
-
-/*
-The code initializes variables and selects DOM elements for further use.
- It then adds an event listener to the button, which triggers a
-  series of functions when clicked.
-*/
-
-const inputs = document.querySelectorAll('[data-input]');
-const empties = document.querySelectorAll('.empty');
-const hints = document.querySelectorAll('.hint');
 const yearToShow = document.getElementById('years');
 const monthToShow = document.getElementById('months');
 const dayToShow = document.getElementById('days');
@@ -19,95 +11,45 @@ const day = document.getElementById('day');
 const month = document.getElementById('month');
 const year = document.getElementById('year');
 
-let isValid;
 
+form.noValidate = true; 
 
-/*
- This code snippet [button.addEventListener] is an event listener for a button click.
- It performs several functions related to validating and calculating
- age based on user input.
-*/
+form.addEventListener("submit", ()=>{
 
-button.addEventListener('click', () => {
-    resetStylesAndTexts();
-
-    isValid = true;
-
-    if (areInputsEmpty()) {
-        setInvalidStylesAndTexts();
-    } else {
-        checkIndividualInputs();
-        checkValidityOfDateValues();
-    }
-
-    if (isValid) {
-        const age = calculateAge(year.value, month.value, day.value);
-
-        updateAgeDisplay(age);
-    }
-});
-
-
-
-
-function resetStylesAndTexts() {
-    inputs.forEach((input, i) => {
-        input.style.borderColor = '#dbdbdb';
-        empties[i].textContent = "";
-        hints[i].style.color = 'hsl(0, 1%, 44%)';
-    });
-}
-
-function areInputsEmpty() {
-    return inputs[0].value === '' && inputs[1].value === '' && inputs[2].value === '';
-}
-
-function setInvalidStylesAndTexts() {
-    inputs.forEach((input, i) => {
-        input.style.borderColor = 'red';
-        empties[i].textContent = 'Empty';
-        hints[i].style.color = 'red';
-        isValid = false;
-    });
-}
-
-function checkIndividualInputs() {
-    inputs.forEach((input, i) => {
-        if (input.value === '') {
-            input.style.borderColor = 'red';
-            empties[i].textContent = "Empty";
-            hints[i].style.color = 'red';
-            isValid = false;
+    event.preventDefault()
+    
+    inputs.forEach(input =>{
+        if(input.validity.valueMissing){
+            input.parentElement.dataset.error = "This Field is required"
+        }else if(input.validity.rangeUnderflow || input.validity.rangeOverflow){
+            if(input.id === 'day'){
+                input.parentElement.dataset.error = 'Must be a valid day'
+            }else if(input.id === 'month'){
+                input.parentElement.dataset.error = 'Must be a valid month'
+            }else{
+                input.parentElement.dataset.error = 'Must be a valid year'
+            }
         }
-    });
-}
+    })
 
-function checkValidityOfDateValues() {
-    if (day.value > 31) {
-        empties[0].textContent = 'Must be a valid day';
-        isValid = false;
-    }
+   if(form.checkValidity()){
+    
+    let age = calculateAge(year.value, month.value, day.value)
 
-    if (month.value > 12) {
-        empties[1].textContent = 'Must be a valid month';
-        isValid = false;
-    }
+    yearToShow.innerHTML = age.years; 
+    monthToShow.innerHTML =age.months; 
+    dayToShow.innerHTML = age.days
 
-    if (year.value > 2024 || year.value < 1950) {
-        empties[2].textContent = 'Must be a valid past';
-        isValid = false;
-    }
-}
+   }
 
-function updateAgeDisplay(age) {
-    yearToShow.textContent = age.years;
-    monthToShow.textContent = age.months;
-    dayToShow.textContent = age.days;
-}
+    
+
+})
 
 
 
-//Function for calculating age
+
+
 function calculateAge(year, month, day) {
     const birthDate = new Date(year, month - 1, day);
     const now = new Date();
