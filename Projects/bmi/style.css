@@ -27,6 +27,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+h1, label{
+  color: white;
+}
+
 .form {
   padding: 20px;
   display: flex;
@@ -34,7 +38,6 @@ body {
   align-items: center;
 }
 .photo img {
-
   width: 400px;
   height: 100%;
   border-top-right-radius: 10px;
@@ -57,31 +60,36 @@ form{
 
 
 .height{
-
   display: flex;
   flex-direction: column;
+  position:relative;
 }
 
+.height::before{
+  content: "cm";
+}
+
+.weight::before{
+  content: "kg";
+}
+
+.height::before, .weight::before{
+  font-size: 1.3rem;
+  opacity: 0.7;
+  right: 10px;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  height: 100px;
+  align-content: center;
+}
 .weight{
-
   display: flex;
   flex-direction: column;
-}
-
-h1, label{
-  color: white;
-}
-
-.error{
-  display: none;
-  margin-top: 5px;
-  margin-left: 10px;
-  color: rgba(255, 0, 0, 0.591); 
-}
-
-.input{
   position: relative;
 }
+
+
 
 input{
   padding: 10px 40px 10px 10px;
@@ -93,13 +101,13 @@ input{
   box-shadow: -2px 5px 8px rgba(0, 0, 0, 0.46);
 }
 
+input:user-invalid{
+  border: 1px solid red;
+}
 
-.prefix{
-  font-size: 20px;
-  position: absolute;
-  right: 10px; 
-  top: 20%; 
-  opacity: .7;
+.input-control:has(input:user-invalid)::after{
+  content: attr(data-error);
+  color: rgb(222, 51, 51);
 }
 
 .button{
@@ -114,7 +122,10 @@ input{
   border-radius: 10px;
   cursor: pointer;
   font-size: 20px;
- 
+}
+
+.button:focus, input:focus{
+  border: 1px solid black;
 }
 
 .result-container h2{
