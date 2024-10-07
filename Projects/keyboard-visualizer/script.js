@@ -160,10 +160,10 @@ document.getElementById("copy").addEventListener("click", function () {
         navigator.clipboard
             .writeText(textToCopy)
             .then(() => {
-                alert("Copied");
+                showToast("Copied");
             })
             .catch((err) => {
-                alert("Failed to copy text: " + err);
+                showToast("Failed to copy text: " + err);
             });
     } else {
 
@@ -171,9 +171,24 @@ document.getElementById("copy").addEventListener("click", function () {
         try {
             const successful = document.execCommand("copy");
             const msg = successful ? "Copied" : "Failed to copy";
-            alert(msg);
+            showToast(msg)
         } catch (err) {
-            alert("Failed to copy text: " + err);
+            showToast("Failed to copy text: " + err);
         }
     }
 });
+
+const showToast = (message) => {
+    const toast = document.querySelector(".custom-toast");
+    toast.innerHTML = message;
+
+    setTimeout(() => {
+        toast.style.opacity = "1";
+    
+
+        setTimeout(() => {
+            toast.style.opacity = "0";
+           
+        }, 500);
+    }, 500);
+};
