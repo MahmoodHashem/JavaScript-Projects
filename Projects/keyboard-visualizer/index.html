@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Keyboad Visualizer</title>
+  </head>
+  <body>
+    <input type="text" id="textInput" placeholder="Type here..." />
+    <div class="keyboard" id="keyboard"></div>
+
+    <label for="langs">Choose keyboard language:</label>
+    <select id="langs" name="langs">
+      <option value="en-US">English</option>
+      <option value="fa">Persian</option>
+      <option value="pashto">Pashto</option>
+    </select>
+    <button id="copy" class="copy">Copy to Clipboard</button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
