@@ -15,11 +15,12 @@
 
 
     let calcHour = (hour,min) =>{
+        let hh = hour % 12;  
+        const deg = (360 / 12) * hh; 
 
-        let hh = 12 % hour || 12; 
-
-        const deg = (360 /12) * hh; 
         const degMin = (30 / 60 ) * min;
+
+        
         
         return deg + degMin; 
     }
@@ -29,9 +30,13 @@
          
     }
 
+   
+
     h = calcHour(h,m); 
     m = calcTime(m); 
     s = calcTime(s); 
+
+
 
     hour.style.rotate = `${h}deg`; 
     minute.style.rotate = `${m}deg`; 
